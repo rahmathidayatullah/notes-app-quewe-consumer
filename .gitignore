@@ -3,7 +3,8 @@
 node_modules
 # notes-api-web-server.pem
 .env
-.prod.env
+.prod-env
+.dev-env
 
 /dist
 package-lock.json
