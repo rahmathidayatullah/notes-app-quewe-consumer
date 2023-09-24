@@ -9,8 +9,6 @@ node_modules
 /dist
 package-lock.json
 node_modules
-notes-api-webserver.pem
-rahmatH97_credentials.csv
 
 # dependencies
 /node_modules
