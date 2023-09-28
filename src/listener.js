@@ -1,6 +1,5 @@
 class Listener {
-    constructor(notesService, mailSender) {
-      this._notesService = notesService;
+    constructor(mailSender) {
       this._mailSender = mailSender;
 
       this.listen = this.listen.bind(this);
@@ -10,9 +9,9 @@ class Listener {
 
         try {
 
-            const { userId, targetEmail } = JSON.parse(message.content.toString());
-            const notes = await this._notesService.getNotes(userId);
-            const result = await this._mailSender.sendEmail(targetEmail, JSON.stringify(notes));
+            const { playlist, targetEmail } = JSON.parse(message.content.toString());
+            const result = await this._mailSender.sendEmail(targetEmail, JSON.stringify(playlist));
+            
             console.log(result);
 
         } catch (error) {
